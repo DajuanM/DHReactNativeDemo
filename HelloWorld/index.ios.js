@@ -16,11 +16,14 @@ var FlexDiceTest = require("./Component/01_flex/01_flex_test")
 var FetchNetData = require("./Component/02_fetch/01_fetchData")
 var TabBarTest = require('./Component/04_tab/TabbarTest')
 var NavigatorTest = require('./Component/03_navigator/NavigatorTest')
+var TabberTest = require('./Component/04_tab/TaberTest')
+var ListViewDemo = require('./Component/05_scrollView/ListViewDemo')
+var AImageDemo = require('./Component/06_AImageDemo/AImageDemo')
 
 export default class HelloWorld extends Component {
   render() {
     return (
-        <TabBarTest/>
+        <AImageDemo/>
     );
   }
 }

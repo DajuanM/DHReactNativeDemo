@@ -27,8 +27,8 @@ export default class FetchNetData extends Component {
             .then((response)=>response.json())
             .then(
                 (responseJson)=> {
-                    var users = responseJson;
-                    var firstUser = users[0].owner;
+                    let users = responseJson;
+                    let firstUser = users[0].owner;
                     AlertIOS.alert(
                         '请求成功',
                         "",
