@@ -12,18 +12,23 @@ import {
   View
 } from 'react-native'
 
-var FlexDiceTest = require("./Component/01_flex/01_flex_test")
-var FetchNetData = require("./Component/02_fetch/01_fetchData")
-var TabBarTest = require('./Component/04_tab/TabbarTest')
-var NavigatorTest = require('./Component/03_navigator/NavigatorTest')
-var TabberTest = require('./Component/04_tab/TaberTest')
-var ListViewDemo = require('./Component/05_scrollView/ListViewDemo')
-var AImageDemo = require('./Component/06_AImageDemo/AImageDemo')
+let FlexDiceTest = require("./Component/01_flex/01_flex_test")
+let FetchNetData = require("./Component/02_fetch/01_fetchData")
+let TabBarTest = require('./Component/04_tab/TabbarTest')
+let NavigatorTest = require('./Component/03_navigator/NavigatorTest')
+let TabberTest = require('./Component/04_tab/TaberTest')
+let ListViewDemo = require('./Component/05_scrollView/ListViewDemo')
+//九宫格图片显示
+let AImageDemo = require('./Component/06_AImageDemo/AImageDemo')
+//TextInput
+let TextInputDemo = require('./Component/07_TextInputDemo/TextInputDemo')
+//QQ登录界面
+let QQLoginView = require('./Component/08_QQLoginDemo/QQLoginView')
 
 export default class HelloWorld extends Component {
   render() {
     return (
-        <AImageDemo/>
+        <QQLoginView/>
     );
   }
 }
