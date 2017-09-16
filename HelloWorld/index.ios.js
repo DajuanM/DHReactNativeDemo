@@ -24,11 +24,17 @@ let AImageDemo = require('./Component/06_AImageDemo/AImageDemo')
 let TextInputDemo = require('./Component/07_TextInputDemo/TextInputDemo')
 //QQ登录界面
 let QQLoginView = require('./Component/08_QQLoginDemo/QQLoginView')
+//不透明点击
+let TouchableDemo = require('./Component/09_TouchableDemo/TouchableDemo')
+//滚动视图demo
+let ScrollViewDemo = require('./Component/10_ScrollViewDemo/ScrollViewDemo')
+//轮播视图
+let DHBannerView = require('./Component/11_DHBannerView/DHBannerView')
 
 export default class HelloWorld extends Component {
   render() {
     return (
-        <QQLoginView/>
+        <DHBannerView/>
     );
   }
 }
