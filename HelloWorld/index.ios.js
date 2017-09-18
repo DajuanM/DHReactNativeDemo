@@ -17,7 +17,7 @@ let FetchNetData = require("./Component/02_fetch/01_fetchData")
 let TabBarTest = require('./Component/04_tab/TabbarTest')
 let NavigatorTest = require('./Component/03_navigator/NavigatorTest')
 let TabberTest = require('./Component/04_tab/TaberTest')
-let ListViewDemo = require('./Component/05_scrollView/ListViewDemo')
+let MyListViewDemo = require('./Component/05_scrollView/ListViewDemo')
 //九宫格图片显示
 let AImageDemo = require('./Component/06_AImageDemo/AImageDemo')
 //TextInput
@@ -30,11 +30,13 @@ let TouchableDemo = require('./Component/09_TouchableDemo/TouchableDemo')
 let ScrollViewDemo = require('./Component/10_ScrollViewDemo/ScrollViewDemo')
 //轮播视图
 let DHBannerView = require('./Component/11_DHBannerView/DHBannerView')
+//列表
+let ListViewDemo = require('./Component/12_ListViewDemo/ListViewDemo')
 
 export default class HelloWorld extends Component {
   render() {
     return (
-        <DHBannerView/>
+        <ListViewDemo/>
     );
   }
 }

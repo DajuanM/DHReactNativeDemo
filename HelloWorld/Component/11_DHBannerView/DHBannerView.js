@@ -11,12 +11,11 @@ import {
 } from 'react-native'
 
 let imgData = require('./imgData.json')
-let TimerMixin = require('react-timer-mixin')
+var TimerMixin = require('react-timer-mixin')
 let Dimensions = require('Dimensions')
 let {width, height} = Dimensions.get('window')
 
 class DHBannerView extends Component {
-
     componentDidMount() {
         console.log('组件启动完毕')
         this.startTimer()
@@ -24,12 +23,11 @@ class DHBannerView extends Component {
 
     constructor(props) {
         super(props)
-        mixins: [TimerMixin]
+
         this.state = {
             //当前的page
             currentPage: 0,
-            duration: 1000,
-            timer: null
+            duration: 1000
         }
     }
 
@@ -100,13 +98,12 @@ class DHBannerView extends Component {
     onScrollBeginDrag() {
         console.log('开始拖拽')
         // clearTimeout(this.timer)
-        clearInterval(this.state.timer)
+        clearInterval(this.timer)
     }
     //停止拖拽
     onScrollEndDrag() {
         console.log('停止拖拽')
-        let self = this
-        self.startTimer()
+        this.startTimer()
     }
 
     startTimer() {
@@ -129,7 +126,8 @@ class DHBannerView extends Component {
         //     let offsetX = activePage * width
         //     // scrollView.scrollResponderScrollTo({x: offsetX, y: 0, animated: true})
         // }, 1000)
-        this.state.timer = setInterval(function () {
+
+        this.timer = setInterval(function () {
             let activePage
             if ((self.state.currentPage + 1) >= imgData.data.length) {
                 activePage = 0
@@ -142,6 +140,26 @@ class DHBannerView extends Component {
             let offsetX = activePage * width
             scrollView.scrollResponderScrollTo({x: offsetX, y: 0, animated: true})
         }, 1000)
+
+        //TimerMixin
+        // this.setInverval(function () {
+        //         let activePage
+        //         if ((self.state.currentPage + 1) >= imgData.data.length) {
+        //             activePage = 0
+        //         }else {
+        //             activePage = self.state.currentPage + 1
+        //         }
+        //         self.setState({
+        //             currentPage: activePage
+        //         })
+        //         let offsetX = activePage * width
+        //         scrollView.scrollResponderScrollTo({x: offsetX, y: 0, animated: true})
+        // })
+
+    }
+    //视图即将销毁
+    componentWillMount() {
+        clearInterval(this.timer)
     }
 }
 

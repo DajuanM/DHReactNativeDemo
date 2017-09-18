@@ -9,7 +9,8 @@ import {
     Text,
     ListView,
     Dimensions,
-    VedioListItem
+    VedioListItem,
+    RefreshControl
 } from 'react-native'
 import VideoListItem from "./VideoListItem"
 
