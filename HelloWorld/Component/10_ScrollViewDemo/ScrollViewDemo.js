@@ -24,7 +24,7 @@ class ScrollViewDemo extends Component {
     renderChildView() {
         var children = []
         let colors = ['red', 'blue', 'purple', 'yellow', 'green']
-        for (var i = 0; i < colors.length; i++) {
+        for (let i = 0; i < colors.length; i++) {
             children.push(
                 <View style={{backgroundColor: colors[i], width: 375, height: 120}}>
                     <Text>{i}</Text>
