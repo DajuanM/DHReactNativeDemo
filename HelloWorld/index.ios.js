@@ -32,11 +32,13 @@ let ScrollViewDemo = require('./Component/10_ScrollViewDemo/ScrollViewDemo')
 let DHBannerView = require('./Component/11_DHBannerView/DHBannerView')
 //列表
 let ListViewDemo = require('./Component/12_ListViewDemo/ListViewDemo')
+//九宫格
+let ListViewDemo1 = require('./Component/12_ListViewDemo/ListViewDemo1')
 
 export default class HelloWorld extends Component {
   render() {
     return (
-        <ListViewDemo/>
+        <ListViewDemo1/>
     );
   }
 }
