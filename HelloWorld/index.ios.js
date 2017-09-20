@@ -34,11 +34,13 @@ let DHBannerView = require('./Component/11_DHBannerView/DHBannerView')
 let ListViewDemo = require('./Component/12_ListViewDemo/ListViewDemo')
 //九宫格
 let ListViewDemo1 = require('./Component/12_ListViewDemo/ListViewDemo1')
+//分组列表
+let ListViewDemo2 = require('./Component/12_ListViewDemo/ListViewDemo2')
 
 export default class HelloWorld extends Component {
   render() {
     return (
-        <ListViewDemo1/>
+        <ListViewDemo2/>
     );
   }
 }
