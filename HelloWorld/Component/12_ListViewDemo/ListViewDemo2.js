@@ -29,7 +29,7 @@ class ListViewDemo2 extends Component {
             getSectionHeaderData: getSectionData,
             getRowData: getRowData,
             rowHasChanged: (r1, r2) => r1 !== r2,
-            sectionHeaderHasChanged: (s1, s2) => s1 != s2
+            sectionHeaderHasChanged: (s1, s2) => s1 !== s2
         })
 
         this.state = {
@@ -50,7 +50,7 @@ class ListViewDemo2 extends Component {
             dataBlob[i] = jsonData[i].title
             cars = jsonData[i].cars
             rowIDs[i] = []
-            for (let j = 0; j < cars; j++) {
+            for (let j = 0; j < cars.length; j++) {
                 rowIDs[i].push(j)
                 dataBlob[i + ':' + j] = cars[j]
             }
@@ -64,7 +64,7 @@ class ListViewDemo2 extends Component {
     render() {
         return (
             <View style={styles.outerViewStyle}>
-                <View>
+                <View style={styles.headerViewStyle}>
                     <Text>SeeMyGo品牌</Text>
                 </View>
                 <ListView
@@ -97,6 +97,12 @@ class ListViewDemo2 extends Component {
 }
 
 const styles = StyleSheet.create({
+    outerViewStyle: {
+        flex: 1
+    },
+    headerViewStyle: {
+
+    },
     rowStyle: {
 
     },
@@ -104,7 +110,8 @@ const styles = StyleSheet.create({
     imgStyle: {
         width: 70,
         height: 70
-    }
+    },
+
 })
 
 module.exports = ListViewDemo2
